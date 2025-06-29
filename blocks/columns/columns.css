@@ -88,6 +88,13 @@
   background: #e6e6e6;
 }
 
+.columns.columns13 {
+  background: #fff;
+  padding: 56px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .columns.columns13 > div {
   display: flex;
   flex-flow: row nowrap;
@@ -98,16 +105,6 @@
 
 .columns.columns13 > div > div {
   margin-bottom: 0;
-}
-
-.columns.columns13 > div:last-child {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: stretch;
-  justify-content: center;
-  margin-top: 44px;
-  min-width: 0;
 }
 
 .columns.columns13 > div > div:not(:last-child) {
@@ -142,6 +139,16 @@
   color: #222;
   font-weight: 500;
   margin-right: 14px;
+}
+
+.columns.columns13 > div:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 44px;
+  min-width: 0;
 }
 
 .columns.columns3 {
@@ -277,23 +284,23 @@
   background-color: transparent;
 }
 
-.columns.columns3 > div > div:first-child ul a[title=Facebook] {
+.columns.columns3 > div > div:first-child ul a[title="Facebook"] {
   background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg');
 }
 
-.columns.columns3 > div > div:first-child ul a[title=Instagram] {
+.columns.columns3 > div > div:first-child ul a[title="Instagram"] {
   background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg');
 }
 
-.columns.columns3 > div > div:first-child ul a[title=X] {
+.columns.columns3 > div > div:first-child ul a[title="X"] {
   background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg');
 }
 
-.columns.columns3 > div > div:first-child ul a[title=LinkedIn] {
+.columns.columns3 > div > div:first-child ul a[title="LinkedIn"] {
   background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg');
 }
 
-.columns.columns3 > div > div:first-child ul a[title=YouTube] {
+.columns.columns3 > div > div:first-child ul a[title="YouTube"] {
   background-image: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg');
 }
 
@@ -365,14 +372,14 @@
   background-color: #181818;
 }
 
-.columns.columns3 * {
-  color: unset;
-}
-
 .columns.columns3 a,
 .columns.columns3 a:visited {
   color: #fff;
   text-decoration: none;
+}
+
+.columns.columns3 * {
+  color: unset;
 }
 
 @media (width >= 900px) {
