@@ -1,0 +1,45 @@
+{
+  "originUrl": "https://wknd-trendsetters.webflow.io",
+  "lastCrawled": "https://wknd-trendsetters.webflow.io/",
+  "urls": [
+    {
+      "url": "https://wknd-trendsetters.webflow.io/",
+      "source": "CRAWL",
+      "targetPath": "/",
+      "id": "0c5f4f7ce8864d7af03165aec812a12465ec27e7"
+    },
+    {
+      "url": "https://wknd-trendsetters.webflow.io/fashion-insights",
+      "source": "CRAWL",
+      "targetPath": "/fashion-insights",
+      "id": "ea7eb16d67cfbaaef306533ddfe915a8f4730012"
+    },
+    {
+      "url": "https://wknd-trendsetters.webflow.io/fashion-trends-of-the-season",
+      "source": "CRAWL",
+      "targetPath": "/fashion-trends-of-the-season",
+      "id": "0075ae26aed0fbe118fcf6403913a4675f852a3c"
+    },
+    {
+      "url": "https://wknd-trendsetters.webflow.io/fashion-trends-young-adults-casual-sport",
+      "source": "CRAWL",
+      "targetPath": "/fashion-trends-young-adults-casual-sport",
+      "id": "251cb4f5e0d8ca921a8de8c69ca1e62c463c251c"
+    }
+  ],
+  "crawlOptions": {
+    "timeout": 64800000,
+    "inclusionPatterns": [],
+    "exclusionPatterns": [],
+    "limit": -1,
+    "sameDomain": true,
+    "keepHash": false,
+    "strategy": "crawl",
+    "logger": {},
+    "strategiesAttempted": [
+      "SITEMAPS",
+      "CRAWL"
+    ]
+  },
+  "extractionErrors": []
+}
