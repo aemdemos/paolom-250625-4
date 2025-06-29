@@ -1,3 +1,10 @@
+/* Moved .columns.columns3 ul before .columns.columns3 > div > div:first-child ul */
+.columns.columns3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -29,5 +36,192 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+.columns.columns3 {
+  background: #000;
+  color: #fff;
+  padding: 56px 0 48px;
+  font-family: Montserrat, Futura, var(--body-font-family), sans-serif;
+}
+
+.columns.columns3 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 64px;
+}
+
+.columns.columns3 > div > div:first-child {
+  min-width: 270px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 370px;
+  padding-bottom: 0;
+}
+
+.columns.columns3 .button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 48px;
+  padding: 0;
+  width: 100%;
+}
+
+.columns.columns3 .button-container .button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0 0 0 16px;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  overflow: visible;
+}
+
+.columns.columns3 .button-container .button::before {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 8px;
+  margin-right: 12px;
+  vertical-align: middle;
+  content: '';
+}
+
+/* Moved .columns.columns3 > div > div:first-child ul after .columns.columns3 ul */
+.columns.columns3 > div > div:first-child ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: flex-end;
+  margin-top: auto;
+  margin-bottom: 12px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.columns.columns3 > div > div:first-child ul li {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.columns.columns3 a {
+  color: #fff;
+}
+
+/* Move .columns.columns3 > div > div:not(:first-child) ul a before .columns.columns3 > div > div:first-child ul a:hover as required by no-descending-specificity */
+.columns.columns3 > div > div:not(:first-child) ul a {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  font-family: inherit;
+  transition: color 0.2s;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.columns.columns3 > div > div ul a:hover {
+  text-decoration: none;
+}
+
+.columns.columns3 > div > div:first-child ul a {
+  color: #b0b0b0;
+  font-size: 0.98rem;
+  text-decoration: none;
+  font-family: inherit;
+  text-transform: capitalize;
+  line-height: 1;
+  transition: color 0.2s;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.columns.columns3 > div > div:first-child ul a:hover {
+  color: #fff;
+}
+
+.columns.columns3 > div > div:not(:first-child) ul a:hover {
+  color: #b0b0b0;
+}
+
+.columns.columns3 > div > div:not(:first-child) {
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.columns.columns3 > div > div:not(:first-child) h2 {
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  margin: 0 0 28px;
+  opacity: 0.8;
+  line-height: 1.2;
+}
+
+.columns.columns3 > div > div:not(:first-child) ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columns.columns3 > div > div:not(:first-child) ul li {
+  margin-bottom: 18px;
+  padding: 0;
+}
+
+.columns.columns3 > div > div:not(:first-child) ul li:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 900px) {
+  .columns.columns3 > div {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .columns.columns3 > div > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .columns.columns3 > div > div:first-child ul {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
