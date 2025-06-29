@@ -1,3 +1,7 @@
+/* Base container styles */
+.cards {
+  background: none;
+}
 
 .cards > ul {
   list-style: none;
@@ -6,6 +10,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
   grid-gap: 24px;
+
+  /* Flex override comes after for .cards.cards6 */
 }
 
 .cards > ul > li {
@@ -27,12 +33,27 @@
   object-fit: cover;
 }
 
+.cards .cards-card-body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+}
+
+.cards .cards-card-body p {
+  color: #222;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
 .cards.cards6 {
   width: 100%;
   background: transparent;
 }
 
-/* Flex row layout for cards */
 .cards.cards6 > ul {
   display: flex;
   flex-flow: row wrap;
@@ -44,7 +65,6 @@
   list-style: none;
 }
 
-/* Card width and spacing: wide and airy */
 .cards.cards6 > ul > li {
   flex: 0 1 calc((100% - 66px) / 4);
   box-sizing: border-box;
@@ -62,22 +82,6 @@
   padding: 0;
 }
 
-/* Responsive adjustments */
-@media (width <= 1100px) {
-  .cards.cards6 > ul > li {
-    flex: 0 1 calc((100% - 22px) / 2);
-    max-width: 100%;
-  }
-}
-
-@media (width <= 700px) {
-  .cards.cards6 > ul > li {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-/* Card image: ensure always visible, flush to card, only top corners rounded */
 .cards.cards6 .cards-card-image {
   display: flex;
   align-items: flex-start;
@@ -90,7 +94,7 @@
   border-radius: 20px 20px 0 0;
   overflow: hidden;
   margin: 0;
-  background: #e0e0e0; /* fallback in case no image */
+  background: #e0e0e0;
 }
 
 .cards.cards6 .cards-card-image img {
@@ -102,7 +106,6 @@
   margin: 0;
 }
 
-/* Card content: more horizontal padding, more vertical gap */
 .cards.cards6 .cards-card-body {
   padding: 0 32px 36px;
   display: flex;
@@ -114,7 +117,6 @@
   box-sizing: border-box;
 }
 
-/* Label/tag: bolder, bigger, more vertical air */
 .cards.cards6 .cards-card-body > p:first-child {
   display: inline-flex;
   align-items: center;
@@ -133,7 +135,6 @@
   box-shadow: none;
 }
 
-/* Card title: bigger, more space below, use geometric heading font */
 .cards.cards6 .cards-card-body h3 {
   font-family: Syncopate, "Syncopate Fallback", Montserrat, Poppins, "Geometric Sans", Arial, sans-serif;
   color: #232323;
@@ -146,7 +147,6 @@
   background: none;
 }
 
-/* Body text: more space above, slightly larger */
 .cards.cards6 .cards-card-body > p:last-child {
   color: #232323;
   font-size: 1.21rem;
@@ -157,7 +157,6 @@
   background: none;
 }
 
-/* Remove overlays/extraneous elements if present */
 .cards.cards6 .unwanted-overlay,
 .cards.cards6 .overlay-menu,
 .cards.cards6 .overlay-nav,
@@ -165,4 +164,63 @@
 .cards.cards6 .cards-menu,
 .cards.cards6 .cards-nav {
   display: none;
+}
+
+.cards > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: 0;
+  flex-basis: calc((100% - 180px) / 4);
+  max-width: calc((100% - 180px) / 4);
+  box-sizing: border-box;
+}
+
+@media (width <= 1100px) {
+  .cards.cards6 > ul > li {
+    flex: 0 1 calc((100% - 22px) / 2);
+    max-width: 100%;
+  }
+
+  .cards > ul > li {
+    flex-basis: calc((100% - 60px) / 2);
+    max-width: calc((100% - 60px) / 2);
+  }
+
+  .cards > ul {
+    gap: 32px 40px;
+  }
+}
+
+@media (width <= 700px) {
+  .cards.cards6 > ul > li {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .cards > ul > li {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .cards > ul {
+    gap: 24px 0;
+  }
 }
