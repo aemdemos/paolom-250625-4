@@ -1,4 +1,8 @@
-
+/*
+ * =====================
+ * HERO COMMON STYLES
+ * =====================
+ */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -15,7 +19,13 @@
 .hero h3,
 .hero h4,
 .hero h5,
-.hero h6,
+.hero h6 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
 .hero p {
   max-width: 1200px;
   margin-left: auto;
@@ -47,6 +57,194 @@
   }
 }
 
+/*
+ * =====================
+ * HERO 8 STYLES
+ * =====================
+ */
+.hero.hero8 {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 650px;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  background: transparent;
+}
+
+.hero.hero8 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+
+.hero.hero8 picture,
+.hero.hero8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.hero.hero8 > div:first-child::after {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(22 22 22 / 46%);
+  border-radius: 20px;
+  z-index: 2;
+  pointer-events: none;
+  content: "";
+}
+
+.hero.hero8 > div:last-child {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 4.5vw 0 4vw 3vw;
+  min-height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.hero.hero8 > div:last-child > div {
+  max-width: 660px;
+  margin-bottom: 0;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero.hero8 h1 {
+  color: #fff;
+  font-family: var(--heading-font-family), Arial, sans-serif;
+  font-size: clamp(3.2rem, 9vw, 7.1rem);
+  font-weight: 400;
+  letter-spacing: 0.012em;
+  line-height: 1.02;
+  margin: 0 0 0.55em;
+  text-align: left;
+  text-shadow: 0 2px 18px rgb(0 0 0 / 13%);
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.hero.hero8 p:not(.button-container) {
+  color: rgb(255 255 255 / 94%);
+  font-size: 1.15rem;
+  line-height: 1.48;
+  margin: 0 0 1.1em;
+  text-align: left;
+  max-width: 570px;
+  padding-left: 0.02em;
+  text-shadow: 0 2px 10px rgb(0 0 0 / 18%);
+}
+
+.hero.hero8 .button-container {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.hero.hero8 .button {
+  background: rgb(24 24 24 / 40%);
+  color: #fff;
+  border: 2px solid #E1F16B;
+  border-radius: 999px;
+  padding: 0.32em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 0.20s, color 0.20s, border 0.20s;
+  line-height: 1.2;
+  margin: 0;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.hero.hero8 .button:hover,
+.hero.hero8 .button:focus {
+  background: #E1F16B;
+  color: #222;
+  border-color: #E1F16B;
+}
+
+.hero.hero8 nav,
+.hero.hero8 .vertical-menu,
+.hero.hero8 .subscribe,
+.hero.hero8 ul,
+.hero.hero8 li {
+  display: none;
+}
+
+@media (width <= 900px) {
+  .hero.hero8 {
+    min-height: 430px;
+  }
+
+  .hero.hero8 > div:last-child {
+    padding-left: 2vw;
+    padding-top: 7vw;
+    padding-bottom: 2vw;
+  }
+
+  .hero.hero8 > div:last-child > div {
+    max-width: 96vw;
+  }
+
+  .hero.hero8 h1 {
+    font-size: clamp(1.7rem, 8vw, 2.8rem);
+    margin-bottom: 0.4em;
+  }
+
+  .hero.hero8 p:not(.button-container) {
+    font-size: 1rem;
+    max-width: 93vw;
+    margin-bottom: 0.8em;
+  }
+}
+
+@media (width <= 600px) {
+  .hero.hero8 {
+    border-radius: 12px;
+    min-height: 320px;
+  }
+
+  .hero.hero8 > div:last-child {
+    padding-left: 2vw;
+    padding-top: 9vw;
+    padding-bottom: 0;
+  }
+
+  .hero.hero8 h1 {
+    font-size: 1.10rem;
+    line-height: 1.09;
+    margin-bottom: 0.20em;
+  }
+}
+
+/*
+ * =====================
+ * HERO 7 STYLES
+ * =====================
+ */
 .hero.hero7 {
   position: relative;
   width: 100vw;
@@ -72,7 +270,6 @@
   z-index: 1;
 }
 
-/* Lay out all images as a collage (3x3 grid for up to 9 images) */
 .hero.hero7 > div:first-child p {
   flex: 1 1 33.3333%;
   min-width: 33.3333%;
@@ -96,22 +293,24 @@
   display: block;
 }
 
-/* Stronger dark overlay for more contrast */
 .hero.hero7 > div:first-child::after {
   pointer-events: none;
   display: block;
   position: absolute;
   inset: 0;
-  width: 100%; height: 100%;
+  width: 100%; 
+  height: 100%;
   background: rgb(18 18 18 / 60%);
   z-index: 2;
   content: "";
 }
 
-/* Overlay and center the text and buttons */
 .hero.hero7 > div:last-child {
   position: absolute;
-  left: 0; top: 0; width: 100vw; height: 100vh;
+  left: 0; 
+  top: 0; 
+  width: 100vw; 
+  height: 100vh;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -132,7 +331,6 @@
   justify-content: center;
 }
 
-/* More compact type and layout */
 .hero.hero7 h1 {
   font-family: var(--heading-font-family);
   font-size: clamp(2rem, 6vw, 4.1rem);
@@ -163,7 +361,6 @@
   border-radius: 0;
 }
 
-/* Button Row */
 .hero.hero7 > div:last-child p:last-child {
   margin: 0;
   display: flex;
