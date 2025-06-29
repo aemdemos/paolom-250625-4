@@ -1,4 +1,4 @@
-/* Moved .columns.columns3 ul before .columns.columns3 > div > div:first-child ul */
+/* Move .columns.columns9 > div before .columns.columns3 > div > div:first-child to resolve no-descending-specificity */
 .columns.columns3 ul {
   list-style: none;
   padding: 0;
@@ -32,7 +32,6 @@
     flex-direction: unset;
     gap: 24px;
   }
-
   .columns > div > div {
     flex: 1;
     order: unset;
@@ -109,7 +108,6 @@
   content: '';
 }
 
-/* Moved .columns.columns3 > div > div:first-child ul after .columns.columns3 ul */
 .columns.columns3 > div > div:first-child ul {
   display: flex;
   flex-flow: row nowrap;
@@ -133,7 +131,6 @@
   color: #fff;
 }
 
-/* Move .columns.columns3 > div > div:not(:first-child) ul a before .columns.columns3 > div > div:first-child ul a:hover as required by no-descending-specificity */
 .columns.columns3 > div > div:not(:first-child) ul a {
   color: #fff;
   font-size: 1.15rem;
@@ -213,15 +210,26 @@
     flex-direction: column;
     gap: 40px;
   }
-
   .columns.columns3 > div > div {
     min-width: 0;
     width: 100%;
   }
-
   .columns.columns3 > div > div:first-child ul {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 20px;
   }
+}
+
+.columns.columns9 > div {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columns.columns9 {
+  background: #F6F7F4;
+  padding: 0;
+  margin: 0;
+  min-height: 395px;
 }
